@@ -4,10 +4,11 @@ import 'package:http/http.dart' as http;
 import 'package:webtoon/models/webtoon_model.dart';
 
 class ApiService {
-  final String baseUrl = "https://webtoon-crawler.nomadcoders.workers.dev";
-  final String today = "today";
+  static const String baseUrl =
+      "https://webtoon-crawler.nomadcoders.workers.dev";
+  static const String today = "today";
 
-  Future<List<WebtoonModel>> getTodaysToons() async {
+  static Future<List<WebtoonModel>> getTodaysToons() async {
     List<WebtoonModel> webtoonInstances = [];
     // async(비동기) 프로그래밍 -> 어떤 일이 일어날 때까지 기다림
     final url = Uri.parse('$baseUrl/$today');
