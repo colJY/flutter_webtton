@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:webtoon/screens/home_screen.dart';
+import 'package:webtoon/servoces/api_service.dart';
 
 void main() {
-  runApp(const App());
+  ApiService().getTodaysToons();
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
