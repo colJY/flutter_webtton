@@ -1,6 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.webtoon">
+
+<queries>
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="http" />
+    </intent>
+</queries>
+
    <application
+        android:usesCleartextTraffic="true"
         android:label="webtoon"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -31,4 +40,7 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+
+
 </manifest>
